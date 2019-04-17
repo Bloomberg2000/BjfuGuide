@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="BjfuGuide.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BjfuGuide"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel
+        Margin="30,10,30,30">
+        <TextBlock x:Name="Text1"
+                   Text="欢迎使用！" 
+                   RelativePanel.AlignTopWithPanel="True"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   />
+        <TextBlock x:Name="Text2" 
+                   RelativePanel.Below="Text1"
+                   Margin="0,40,0,0"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   FontSize="20"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Bottom"
+                   AllowDrop="True"
+                   TextWrapping="Wrap" FontWeight="Normal"
+                   LineHeight="30" TextAlignment="Left" CharacterSpacing="40"
+               
+                   >
+            <Run Text="本系统由 前台服务 和 后台管理 两个子系统组成。"/><LineBreak/>
+            <Run Text="前台服务功能包括："/><LineBreak/>
+            <Run Text="    1. 景点信息查询："/><LineBreak/>
+            <Run Text="    （1）根据景点名称查询；"/><LineBreak/>
+            <Run Text="    （2）根据景点功能查询；"/><LineBreak/>
+            <Run Text="    2. 路径规划"/><LineBreak/>
+            <Run Text="    3. 最优布线路径"/><LineBreak/>
+            <Run Text="后台管理功能包括："/><LineBreak/>
+            <Run Text="    1. 修改一个已有景点的相关信息；"/><LineBreak/>
+            <Run Text="    2. 增加一个新景点及其相关信息；"/><LineBreak/>
+            <Run Text="    3. 增加一条新的路径；"/><LineBreak/>
+            <Run Text="    4. 删除一个景点及其相关信息；"/><LineBreak/>
+            <Run Text="    5. 删除一条路径；"/><LineBreak/><Run/>
+        </TextBlock>
+        <StackPanel RelativePanel.AlignRightWithPanel="True"
+                    Height="150"
+                    Width="150">
+            <Image Source="Assets/Bjfu_Logo.png" Stretch="UniformToFill" 
+               
+               />
+        </StackPanel>
+    </RelativePanel>
+</Page>

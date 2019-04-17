@@ -1,0 +1,117 @@
+﻿<Page
+    x:Class="BjfuGuide.FrontStagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BjfuGuide"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+        <RelativePanel Margin="30,10,30,30">
+            <StackPanel Name="SearchService" RelativePanel.AlignTopWithPanel="True">
+                <TextBlock x:Name="Text1"
+                       Text="搜索"
+                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                       FontSize="30"
+                       />
+                <StackPanel Name="SelectionBar" Orientation="Vertical" RelativePanel.Below="Text1" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch">
+                    <TextBlock Text="搜索方式" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <RadioButton Content="景点名称" Tag="searchByName" GroupName="SearchType" Checked="RadioButton_Checked"/>
+                        <RadioButton Content="景点功能" Tag="searchByFunction" GroupName="SearchType" Checked="RadioButton_Checked"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <AutoSuggestBox 
+                        Name="SearchBar" 
+                        Width="200" 
+                        HorizontalAlignment="Left"
+                        QueryIcon="Find"
+                        TextChanged="SearchBar_TextChanged"
+                        QuerySubmitted="SearchBar_QuerySubmitted"
+                        SuggestionChosen="SearchBar_SuggestionChosen"
+                        />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="SearchResult" 
+                        Orientation="Vertical" 
+                        RelativePanel.Below="SelectionBar" 
+                        HorizontalAlignment="Stretch" 
+                        Margin="0,10,0,0" 
+                        VerticalAlignment="Stretch"
+                        Visibility="Collapsed">
+                    <TextBlock Text="搜索结果" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <StackPanel Name="SearchResultText" Orientation="Vertical">
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="RouteService" RelativePanel.Below="SearchService" Margin="0,20,0,0">
+                <TextBlock x:Name="Text2"
+                       Text="路径规划"
+                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                       FontSize="30"
+                       />
+                <StackPanel Name="PointSelection" Orientation="Horizontal">
+                    <StackPanel Name="startPointSelection" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0,10,10,0" VerticalAlignment="Stretch">
+                        <TextBlock Text="起点" Style="{ThemeResource BaseTextBlockStyle}"/>
+                        <TextBox Name="startPoint" Width="90"/>
+                    </StackPanel>
+                    <StackPanel Name="endPointSelection" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="5,10,0,0" VerticalAlignment="Stretch">
+                        <TextBlock Text="终点" Style="{ThemeResource BaseTextBlockStyle}"/>
+                        <TextBox Name="endPoint" Width="90"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button Name="getRoute" Click="GetRoute_Click" 
+                        Width="200" Margin="0,10,0,0" Height="Auto"
+                        Content="查询"/>
+                <StackPanel x:Name="ShortestPathResult" 
+                        Orientation="Vertical" 
+                        RelativePanel.Below="PointSelection" 
+                        HorizontalAlignment="Stretch" 
+                        Margin="0,10,0,0" 
+                        VerticalAlignment="Stretch"
+                        Visibility="Collapsed">
+                    <TextBlock Text="最短路径" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <StackPanel Name="ShortestPathResultText" Orientation="Vertical">
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="AllPathResult" 
+                        Orientation="Vertical" 
+                        RelativePanel.Below="ShortestPathResult" 
+                        HorizontalAlignment="Stretch" 
+                        Margin="0,10,0,0" 
+                        VerticalAlignment="Stretch"
+                        Visibility="Collapsed">
+                    <TextBlock Text="所有路径" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <StackPanel Name="AllPathResultText" Orientation="Vertical">
+
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="RouteDesign" RelativePanel.Below="RouteService" Margin="0,20,0,0">
+                <TextBlock x:Name="Text3"
+                       Text="最优布线路径"
+                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                       FontSize="30"
+                       />
+                <Button Name="designRoute" Click="DesignRoute_Click"
+                        Width="200" Margin="0,10,0,0" Height="Auto"
+                        Content="获取布线方案"/>
+                <StackPanel x:Name="RouteDesignResult" 
+                        Orientation="Vertical" 
+                        RelativePanel.Below="SelectionBar" 
+                        HorizontalAlignment="Stretch" 
+                        Margin="0,10,0,0" 
+                        VerticalAlignment="Stretch"
+                        Visibility="Collapsed">
+                    <TextBlock Text="布线方案" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <StackPanel Name="RouteDesignText" Orientation="Vertical">
+
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </RelativePanel>
+    </ScrollViewer>
+</Page>
+

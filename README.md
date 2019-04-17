@@ -10,8 +10,16 @@
   * 由于时间问题，用户管理功能已实现接口，但未开发用户界面
   * 根据题目要求，数据存储在txt文件中，未对接数据库
 
+* 运行截图
+
+  ![批注 2019-04-17 151041](https://ws2.sinaimg.cn/large/006tNc79ly1g25nfbfsa4j317o0u0aij.jpg)
+
+  ![批注 2019-04-17 151055](https://ws4.sinaimg.cn/large/006tNc79ly1g25nfaysoyj317o0u0n1r.jpg)
+
+  ![批注 2019-04-17 151106](https://ws2.sinaimg.cn/large/006tNc79ly1g25nfa1zwxj317o0u048s.jpg)
 
 * 注意事项
+
     1. 由于Windows API中的要求 UWP应用只能读取固定区域的文件，具体的AppData文件目录无法确定。初次使用为了数据库的正常读取，请使用`\Util`文件夹下`UWPHelper.cpp`中的`getFilePath()`函数获取`AppData`目录，然后将`\DataBase\map.txt`及`\DataBase\map.txt`拷贝到相应目录下。以后不需再次配置。函数原型：
 
        ```c++
@@ -27,7 +35,8 @@
     2. 后台管理默认用户
        * 用户名：admin
        * 密码：admin
-	> 您可以使用\Service\UserService中的createUser()方法创建新用户
+    > 您可以使用\Service\UserService中的createUser()方法创建新用户
 
 * 参考资料
+
   * 数据结构（C++语言版）（第2版）邓俊辉 清华大学出版社

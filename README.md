@@ -13,6 +13,7 @@
   ![1.png](README.assets/1.png)
   ![2.png](README.assets/2.png)
   ![3.png](README.assets/3.png)
+  ![4.png](README.assets/4.png)
 
 
 * 注意事项

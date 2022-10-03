@@ -14,6 +14,7 @@
   ![2.png](README.assets/2.png)
   ![3.png](README.assets/3.png)
 
+
 * 注意事项
 
   1. 由于Windows API中的要求 UWP应用只能读取固定区域的文件，具体的AppData文件目录无法确定。初次使用为了数据库的正常读取，请使用 `\Util`文件夹下 `UWPHelper.cpp`中的 `getFilePath()`函数获取 `AppData`目录，然后将 `\DataBase\map.txt`及 `\DataBase\map.txt`拷贝到相应目录下。以后不需再次配置。函数原型：

@@ -12,11 +12,11 @@
 
 * 运行截图
 
-  ![批注 2019-04-17 151041](https://ws2.sinaimg.cn/large/006tNc79ly1g25nfbfsa4j317o0u0aij.jpg)
+  ![截屏2022-10-03 19.01.36](README.assets/截屏2022-10-03 19.01.36.png)
 
-  ![批注 2019-04-17 151055](https://ws4.sinaimg.cn/large/006tNc79ly1g25nfaysoyj317o0u0n1r.jpg)
+  ![截屏2022-10-03 19.02.06](README.assets/截屏2022-10-03 19.02.06.png)
 
-  ![批注 2019-04-17 151106](https://ws2.sinaimg.cn/large/006tNc79ly1g25nfa1zwxj317o0u048s.jpg)
+  ![截屏2022-10-03 19.02.18](README.assets/截屏2022-10-03 19.02.18.png)
 
 * 注意事项
 

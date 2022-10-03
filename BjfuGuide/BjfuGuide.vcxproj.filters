@@ -216,6 +216,7 @@
   <ItemGroup>
     <None Include="BjfuGuide_TemporaryKey.pfx" />
     <None Include="DataBase\users.db" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />

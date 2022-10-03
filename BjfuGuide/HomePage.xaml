@@ -5,27 +5,23 @@
     xmlns:local="using:BjfuGuide"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <RelativePanel
         Margin="30,10,30,30">
         <TextBlock x:Name="Text1"
                    Text="欢迎使用！" 
                    RelativePanel.AlignTopWithPanel="True"
-                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Style="{StaticResource SubheaderTextBlockStyle}"
                    />
         <TextBlock x:Name="Text2" 
                    RelativePanel.Below="Text1"
-                   Margin="0,40,0,0"
-                   Style="{StaticResource HeaderTextBlockStyle}"
-                   FontSize="20"
+                   Margin="0,20,0,0"
+                   Style="{StaticResource BodyTextBlockStyle}"
                    HorizontalAlignment="Stretch" 
                    VerticalAlignment="Bottom"
                    AllowDrop="True"
-                   TextWrapping="Wrap" FontWeight="Normal"
-                   LineHeight="30" TextAlignment="Left" CharacterSpacing="40"
-               
+                   TextWrapping="Wrap" 
                    >
             <Run Text="本系统由 前台服务 和 后台管理 两个子系统组成。"/><LineBreak/>
             <Run Text="前台服务功能包括："/><LineBreak/>

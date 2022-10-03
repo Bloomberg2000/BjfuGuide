@@ -82,10 +82,10 @@ void BackStagePage::loadSpotData() {
 
 		auto contentB = ref new TextBlock;
 		contentB->Text = UWPHelper::std_str_To_Platform_Str(vertexArr[i].data.get_info().cpp_str());
-		contentB->TextWrapping = Windows::UI::Xaml::TextWrapping::Wrap;
-		contentB->Width = 300;
+		contentB->Width = 200;
 		contentB->HorizontalAlignment = Windows::UI::Xaml::HorizontalAlignment::Left;
 		contentB->VerticalAlignment = Windows::UI::Xaml::VerticalAlignment::Top;
+		contentB->TextWrapping = Windows::UI::Xaml::TextWrapping::Wrap;
 		tableContents->SetColumn(contentB, 1);
 
 		auto Buttons = ref new RelativePanel;
@@ -101,11 +101,12 @@ void BackStagePage::loadSpotData() {
 
 		Buttons->SetAlignLeftWithPanel(editButton, true);
 		Buttons->SetRightOf(delButton, editButton);
-		Buttons->Width = 100;
+		Buttons->Width = 200;
 
 		Buttons->Children->Append(editButton);
 		Buttons->Children->Append(delButton);
 
+		Buttons->Margin = Windows::UI::Xaml::Thickness(5, 0, 0, 0);
 		tableContents->SetColumn(Buttons, 3);
 
 		//放入列表
@@ -157,6 +158,7 @@ void BjfuGuide::BackStagePage::loadRouteData()
 				auto contentB = ref new TextBlock;
 				contentB->Text = UWPHelper::std_str_To_Platform_Str(bjfuMap->vertex(j).get_name().cpp_str());
 				contentB->TextWrapping = Windows::UI::Xaml::TextWrapping::Wrap;
+				contentB->TextTrimming = Windows::UI::Xaml::TextTrimming::WordEllipsis;
 				contentB->Width = 120;
 				contentB->HorizontalAlignment = Windows::UI::Xaml::HorizontalAlignment::Left;
 				contentB->VerticalAlignment = Windows::UI::Xaml::VerticalAlignment::Top;

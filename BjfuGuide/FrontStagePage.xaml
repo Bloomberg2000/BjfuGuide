@@ -5,15 +5,13 @@
     xmlns:local="using:BjfuGuide"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
     <ScrollViewer>
         <RelativePanel Margin="30,10,30,30">
             <StackPanel Name="SearchService" RelativePanel.AlignTopWithPanel="True">
                 <TextBlock x:Name="Text1"
                        Text="搜索"
                        Style="{ThemeResource SubtitleTextBlockStyle}"
-                       FontSize="30"
                        />
                 <StackPanel Name="SelectionBar" Orientation="Vertical" RelativePanel.Below="Text1" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch">
                     <TextBlock Text="搜索方式" Style="{ThemeResource BaseTextBlockStyle}"/>
@@ -24,7 +22,7 @@
                     <StackPanel Orientation="Horizontal">
                         <AutoSuggestBox 
                         Name="SearchBar" 
-                        Width="200" 
+                        Width="300" 
                         HorizontalAlignment="Left"
                         QueryIcon="Find"
                         TextChanged="SearchBar_TextChanged"
@@ -49,20 +47,19 @@
                 <TextBlock x:Name="Text2"
                        Text="路径规划"
                        Style="{ThemeResource SubtitleTextBlockStyle}"
-                       FontSize="30"
                        />
                 <StackPanel Name="PointSelection" Orientation="Horizontal">
                     <StackPanel Name="startPointSelection" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0,10,10,0" VerticalAlignment="Stretch">
                         <TextBlock Text="起点" Style="{ThemeResource BaseTextBlockStyle}"/>
-                        <TextBox Name="startPoint" Width="90"/>
+                        <TextBox Name="startPoint" Width="140"/>
                     </StackPanel>
                     <StackPanel Name="endPointSelection" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="5,10,0,0" VerticalAlignment="Stretch">
                         <TextBlock Text="终点" Style="{ThemeResource BaseTextBlockStyle}"/>
-                        <TextBox Name="endPoint" Width="90"/>
+                        <TextBox Name="endPoint" Width="140"/>
                     </StackPanel>
                 </StackPanel>
                 <Button Name="getRoute" Click="GetRoute_Click" 
-                        Width="200" Margin="0,10,0,0" Height="Auto"
+                        Width="300" Margin="0,10,0,0" Height="Auto"
                         Content="查询"/>
                 <StackPanel x:Name="ShortestPathResult" 
                         Orientation="Vertical" 
@@ -93,10 +90,9 @@
                 <TextBlock x:Name="Text3"
                        Text="最优布线路径"
                        Style="{ThemeResource SubtitleTextBlockStyle}"
-                       FontSize="30"
                        />
                 <Button Name="designRoute" Click="DesignRoute_Click"
-                        Width="200" Margin="0,10,0,0" Height="Auto"
+                        Width="300" Margin="0,10,0,0" Height="Auto"
                         Content="获取布线方案"/>
                 <StackPanel x:Name="RouteDesignResult" 
                         Orientation="Vertical" 

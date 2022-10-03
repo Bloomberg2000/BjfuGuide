@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "User.h"
-
+#include <iostream>
 
 User::User() = default;
 
@@ -56,7 +56,7 @@ std::istream & operator>>(std::istream &in, User & user)
 
 std::ostream &operator<<(std::ostream &os, const User &user)
 {
-	os << user._username << " " << user._password;
+	os << user._username << "" << user._password;
 	return os;
 }
 

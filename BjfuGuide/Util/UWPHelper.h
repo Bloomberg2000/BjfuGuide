@@ -5,6 +5,7 @@ using namespace Platform;
 using namespace Windows::Storage;
 
 #include <string>
+#include <locale>
 #include <vector>
 class UWPHelper {
 public:

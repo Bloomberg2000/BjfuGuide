@@ -4,14 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
         <NavigationView x:Name="NavView"
                         Loaded="NavView_Loaded"
                         ItemInvoked="NavView_ItemInvoked"
                         IsSettingsVisible="False"
+                        IsBackEnabled="False"
+                        IsBackButtonVisible="Collapsed"
                         Header="北林自助导游及信息服务系统">
             <NavigationView.PaneHeader>
                 <Image Source="Assets/Bjfu.png" HorizontalAlignment="Left" Margin="-10,0,0,0"/>
@@ -25,7 +26,7 @@
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE707;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="backstage" Content="后台管理">
+                <NavigationViewItem Tag="backstage" Content="后台管理" >
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE912;"/>
                     </NavigationViewItem.Icon>
@@ -66,7 +67,9 @@
                         <Setter Target="NavViewSearchBox.Width" Value="200"/>
                         <Setter Target="MainPagesHeader.Visibility" Value="Collapsed"/>-->
                         <!-- Leave the next line for left-only navigation. -->
-                        <Setter Target="ContentFrame.Padding" Value="24,0,24,24"/>
+                        <!-- <Setter Target="ContentFrame.Padding" Value="24,0,24,24"/>-->
+                        <Setter Target="NavView.PaneDisplayMode" Value="Left"/>
+                     
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

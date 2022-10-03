@@ -12,6 +12,7 @@ using namespace BjfuGuide;
 using namespace Platform;
 using namespace Windows::ApplicationModel;
 using namespace Windows::ApplicationModel::Activation;
+using namespace Windows::ApplicationModel::Core;
 using namespace Windows::Foundation;
 using namespace Windows::Foundation::Collections;
 using namespace Windows::UI::Xaml;
@@ -22,6 +23,8 @@ using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Interop;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::UI::ViewManagement;
+using namespace Windows::UI;
 
 /// <summary>
 /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
@@ -74,6 +77,10 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
             // 确保当前窗口处于活动状态
             Window::Current->Activate();
         }
+        CoreApplication::GetCurrentView()->TitleBar->ExtendViewIntoTitleBar = true;
+        auto titleBar = ApplicationView::GetForCurrentView()->TitleBar;
+        titleBar->ButtonBackgroundColor = Colors::Transparent;
+        titleBar->ButtonInactiveBackgroundColor = Colors::Transparent;
     }
     else
     {

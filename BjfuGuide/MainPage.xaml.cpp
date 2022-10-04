@@ -37,7 +37,7 @@ void BjfuGuide::MainPage::NavView_Loaded(Platform::Object^ sender, Windows::UI::
 }
 
 
-void BjfuGuide::MainPage::NavView_ItemInvoked(Windows::UI::Xaml::Controls::NavigationView^ sender, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs^ args)
+void BjfuGuide::MainPage::NavView_ItemInvoked(Microsoft::UI::Xaml::Controls::NavigationView^ sender, Microsoft::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs^ args)
 {
 	auto navItemTag = args->InvokedItemContainer->Tag->ToString();
 	if (navItemTag == "home")

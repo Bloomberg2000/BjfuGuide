@@ -4,10 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <Grid>
-        <NavigationView x:Name="NavView"
+        <muxc:NavigationView x:Name="NavView"
                         Loaded="NavView_Loaded"
                         ItemInvoked="NavView_ItemInvoked"
                         IsSettingsVisible="False"
@@ -15,29 +16,29 @@
                         IsBackButtonVisible="Collapsed"
                         PaneDisplayMode="Left"
                         Header="北林自助导游及信息服务系统">
-            <NavigationView.PaneHeader>
-                <Image Source="Assets/Bjfu.png" HorizontalAlignment="Left" Margin="-10,0,0,0"/>
-            </NavigationView.PaneHeader>
-            <NavigationView.MenuItems>
-                <NavigationViewItem Tag="home" Icon="Home" Content="主页"/>
-                <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader x:Name="MainPagesHeader" Content="应用"/>
-                <NavigationViewItem Tag="frontstage" Content="前台服务">
-                    <NavigationViewItem.Icon>
+            <muxc:NavigationView.PaneHeader>
+                <Image Source="Assets/Bjfu.png" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+            </muxc:NavigationView.PaneHeader>
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem Tag="home" Icon="Home" Content="主页"/>
+                <muxc:NavigationViewItemSeparator/>
+                <muxc:NavigationViewItemHeader x:Name="MainPagesHeader" Content="应用"/>
+                <muxc:NavigationViewItem Tag="frontstage" Content="前台服务">
+                    <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE707;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Tag="backstage" Content="后台管理" >
-                    <NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem Tag="backstage" Content="后台管理" >
+                    <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE912;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
 
-            </NavigationView.MenuItems>
+            </muxc:NavigationView.MenuItems>
             <Frame x:Name="contentFrame">
             </Frame>
 
-        </NavigationView>
+        </muxc:NavigationView>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState>

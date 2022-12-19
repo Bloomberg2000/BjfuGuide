@@ -18,7 +18,7 @@
                              PaneDisplayMode="Left"
                              Header="北林自助导游及信息服务系统">
             <muxc:NavigationView.PaneHeader>
-                <Image Source="Assets/Bjfu.png" HorizontalAlignment="Left" Margin="-10,0,0,0" Width="10"/>
+                <Image Source="Assets/Bjfu.png" HorizontalAlignment="Left" Margin="-10,0,0,0" Width="150"/>
             </muxc:NavigationView.PaneHeader>
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem Tag="home" Icon="Home" Content="主页"/>
